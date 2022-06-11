@@ -1,5 +1,7 @@
 # Karp
 
+[![Test](https://github.com/cmackenzie1/karp/actions/workflows/deno-test.yml/badge.svg)](https://github.com/cmackenzie1/karp/actions/workflows/deno-test.yml)
+
 A streaming utility library built for the modern
 [Web Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
 era and works with Deno and Cloudlfare Workers runtimes!
