@@ -52,3 +52,12 @@ export class FromJSON extends TransformStream {
     super(new ReadJSONTransformer(options));
   }
 }
+
+interface ToJSONOptions {
+  mode: "drop" | "fail";
+}
+export class ToJSON extends TransformStream {
+  constructor(options: ToJSONOptions = { mode: "fail" }) {
+    super(new WriteJSONTransformer(options));
+  }
+}
