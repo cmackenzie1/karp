@@ -21,7 +21,7 @@ export class ReadlineTransformer implements Transformer {
 
   transform(
     chunk: string,
-    controller: TransformStreamDefaultController<string>
+    controller: TransformStreamDefaultController<string>,
   ) {
     console.log(`[ReadlineTransformer] received ${chunk.length} bytes`);
     // prepend with previous string (empty if none)

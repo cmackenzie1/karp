@@ -17,8 +17,9 @@ Deno.test("map stream", async () => {
 
   source.pipeThrough(oddStream).pipeTo(writable);
   for await (const result of readable) {
-    if (typeof result !== "number")
+    if (typeof result !== "number") {
       fail("exptected number but got " + typeof result);
+    }
     if (result % 10 !== 0) fail("expected everything to be a multiple of 10");
   }
 });

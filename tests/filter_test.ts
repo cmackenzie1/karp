@@ -17,8 +17,9 @@ Deno.test("filter stream", async () => {
 
   source.pipeThrough(oddStream).pipeTo(writable);
   for await (const result of readable) {
-    if (typeof result !== "number")
+    if (typeof result !== "number") {
       fail("exptected number but got " + typeof result);
+    }
     if (result % 2 !== 1) fail("expected odd numbers only!");
   }
 });

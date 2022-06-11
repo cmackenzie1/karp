@@ -1,8 +1,11 @@
 # Karp
 
-A streaming utility library built for the modern [Web Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) era and works with Deno and Cloudlfare Workers runtimes!
+A streaming utility library built for the modern
+[Web Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
+era and works with Deno and Cloudlfare Workers runtimes!
 
-Note: This library is in its very early stages so all API's are subject to change until the first major release. :)
+Note: This library is in its very early stages so all API's are subject to
+change until the first major release. :)
 
 ## Usage
 
@@ -37,7 +40,8 @@ For more examples, checkout the `tests/` directory.
 
 ## Developing
 
-To contribute, ensure you have the latest version of [Deno](https://deno.land/) installed.
+To contribute, ensure you have the latest version of [Deno](https://deno.land/)
+installed.
 
 ### Running Tests
 
@@ -47,9 +51,12 @@ deno test --allow-all --watch
 
 ## Contributing
 
-Want to see a feature added? Go ahead and create an new feature request or feel free to even create a PR yourself to add it! Just remember to run the following steps before opening the pull request.
+Want to see a feature added? Go ahead and create an new feature request or feel
+free to even create a PR yourself to add it! Just remember to run the following
+steps before opening the pull request.
 
 ```bash
 deno lint # ensure there is nothing forbidden by the linter
 deno fmt # ensure consistent code style is used.
+deno test --allow-all # make sure it works :)
 ```
