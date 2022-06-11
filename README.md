@@ -49,6 +49,12 @@ installed.
 deno test --allow-all --watch
 ```
 
+### Building
+
+```bash
+deno run --allow-all build.ts
+```
+
 ## Contributing
 
 Want to see a feature added? Go ahead and create an new feature request or feel

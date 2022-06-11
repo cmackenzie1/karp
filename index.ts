@@ -1,10 +1,10 @@
-import { FilterTransformer } from "./transformers/filter.ts";
-import { ReadJSONTransformer } from "./transformers/jsonRead.ts";
-import { WriteJSONTransformer } from "./transformers/jsonWrite.ts";
-import { MapTransformer } from "./transformers/map.ts";
-import { ReadlineTransformer } from "./transformers/readline.ts";
-import { TextDecodeTransformer } from "./transformers/textDecode.ts";
-import { TextEncodeTransformer } from "./transformers/textEncode.ts";
+import { FilterTransformer } from "./lib/transformers/filter.ts";
+import { ReadJSONTransformer } from "./lib/transformers/jsonRead.ts";
+import { WriteJSONTransformer } from "./lib/transformers/jsonWrite.ts";
+import { MapTransformer } from "./lib/transformers/map.ts";
+import { ReadlineTransformer } from "./lib/transformers/readline.ts";
+import { TextDecodeTransformer } from "./lib/transformers/textDecode.ts";
+import { TextEncodeTransformer } from "./lib/transformers/textEncode.ts";
 
 export {
   FilterTransformer,
