@@ -1,5 +1,5 @@
 export class TextEncodeTransformer implements Transformer {
-  private encoder: TextEncoder;
+  encoder: TextEncoder;
 
   constructor() {
     this.encoder = new TextEncoder();

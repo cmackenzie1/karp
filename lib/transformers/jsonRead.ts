@@ -22,7 +22,6 @@ export class ReadJSONTransformer implements Transformer {
   }
 
   transform(chunk: string, controller: TransformStreamDefaultController) {
-    console.log(`[ReadJSONTransformer] received ${typeof chunk}`);
     if (typeof chunk !== "string") {
       switch (this.options.mode) {
         case "fail":
@@ -60,9 +59,5 @@ export class ReadJSONTransformer implements Transformer {
         default:
       }
     }
-  }
-
-  flush(_controller: TransformStreamDefaultController) {
-    console.log("[ReadJSONTransformer] received all inputs");
   }
 }

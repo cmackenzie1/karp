@@ -1,9 +1,16 @@
+// @ts-ignore: disable TS2691
 import { FilterTransformer } from "./lib/transformers/filter.ts";
+// @ts-ignore: disable TS2691
 import { ReadJSONTransformer } from "./lib/transformers/jsonRead.ts";
+// @ts-ignore: disable TS2691
 import { WriteJSONTransformer } from "./lib/transformers/jsonWrite.ts";
+// @ts-ignore: disable TS2691
 import { MapTransformer } from "./lib/transformers/map.ts";
+// @ts-ignore: disable TS2691
 import { ReadlineTransformer } from "./lib/transformers/readline.ts";
+// @ts-ignore: disable TS2691
 import { TextDecodeTransformer } from "./lib/transformers/textDecode.ts";
+// @ts-ignore: disable TS2691
 import { TextEncodeTransformer } from "./lib/transformers/textEncode.ts";
 
 export {
@@ -21,14 +28,34 @@ export class ReadlineStream extends TransformStream {
 }
 
 export class TextEncoderStream extends TransformStream {
+  private _transformer: TextEncodeTransformer;
   constructor() {
-    super(new TextEncodeTransformer());
+    const transformer = new TextEncodeTransformer();
+    super(transformer);
+    this._transformer = transformer;
+  }
+
+  get encoding() {
+    return this._transformer.encoding;
   }
 }
 
 export class TextDecoderStream extends TransformStream {
+  private _transformer: TextDecodeTransformer;
   constructor(encoding = "utf-8") {
-    super(new TextDecodeTransformer(encoding));
+    const transformer = new TextDecodeTransformer(encoding);
+    super(transformer);
+    this._transformer = transformer;
+  }
+
+  get encoding() {
+    return this._transformer.encoding;
+  }
+  get ignoreBOM() {
+    return this._transformer.ignoreBOM;
+  }
+  get fatal() {
+    return this._transformer.fatal;
   }
 }
 

@@ -1,0 +1,16 @@
+{
+  "include": ["./index.ts"],
+  "exclude": ["node_modules", "**/*.d.ts", "**/dist/*"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "isolatedModules": true,
+    "lib": ["WebWorker", "ESNext"],
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "skipLibCheck": true
+  }
+}

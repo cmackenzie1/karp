@@ -18,7 +18,6 @@ export class WriteJSONTransformer implements Transformer {
   }
 
   transform(chunk: unknown, controller: TransformStreamDefaultController) {
-    console.log(`[WriteJSONTransformer] received ${typeof chunk}:`, chunk);
     try {
       if (chunk) controller.enqueue(toJSON(chunk));
     } catch (e) {
@@ -33,9 +32,5 @@ export class WriteJSONTransformer implements Transformer {
         default:
       }
     }
-  }
-
-  flush(_controller: TransformStreamDefaultController) {
-    console.log("[WriteJSONTransformer] received all inputs");
   }
 }

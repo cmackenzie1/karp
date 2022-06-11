@@ -8,8 +8,4 @@ export class MapTransformer<I, O = unknown> implements Transformer {
   transform(chunk: I, controller: TransformStreamDefaultController<O>) {
     controller.enqueue(this.fn(chunk));
   }
-
-  flush(_controller: TransformStreamDefaultController) {
-    console.log("[MapTransformer] received all inputs");
-  }
 }

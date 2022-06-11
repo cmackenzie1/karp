@@ -8,8 +8,4 @@ export class FilterTransformer<I> implements Transformer {
   transform(chunk: I, controller: TransformStreamDefaultController) {
     if (this.fn(chunk)) controller.enqueue(chunk);
   }
-
-  flush() {
-    console.log("[FilterTransformer] received all inputs");
-  }
 }

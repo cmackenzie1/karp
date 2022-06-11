@@ -23,7 +23,6 @@ export class ReadlineTransformer implements Transformer {
     chunk: string,
     controller: TransformStreamDefaultController<string>,
   ) {
-    console.log(`[ReadlineTransformer] received ${chunk.length} bytes`);
     // prepend with previous string (empty if none)
     const str = `${this.lastString}${chunk}`;
     // Extract lines from chunk
@@ -38,7 +37,6 @@ export class ReadlineTransformer implements Transformer {
   }
 
   flush(controller: TransformStreamDefaultController<string>) {
-    console.log("[ReadlineTransformer] flushed");
     if (this.lastString.length > 0) controller.enqueue(this.lastString);
   }
 }
