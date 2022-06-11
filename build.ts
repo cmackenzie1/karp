@@ -1,7 +1,8 @@
 import * as esbuild from "https://deno.land/x/esbuild/mod.js";
+import { existsSync } from "https://deno.land/std/fs/mod.ts";
 
 const emptyDir = (path: string) => {
-  Deno.removeSync(path, { recursive: true });
+  if (existsSync(path)) Deno.removeSync(path, { recursive: true });
   Deno.mkdirSync(path);
 };
 
