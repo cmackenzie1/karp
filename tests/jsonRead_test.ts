@@ -1,4 +1,4 @@
-import { FromJSON } from "../streams/index.ts";
+import { FromJSON } from "../index.ts";
 import { assertEquals } from "https://deno.land/std@0.143.0/testing/asserts.ts";
 
 Deno.test("fromJSON", async () => {

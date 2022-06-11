@@ -1,4 +1,4 @@
-import { MapStream } from "../streams/index.ts";
+import { MapStream } from "../index.ts";
 import { fail } from "https://deno.land/std@0.143.0/testing/asserts.ts";
 
 Deno.test("map stream", async () => {

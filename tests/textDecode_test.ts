@@ -1,4 +1,4 @@
-import { TextDecoderStream } from "../streams/index.ts";
+import { TextDecoderStream } from "../index.ts";
 
 import { fail } from "https://deno.land/std@0.143.0/testing/asserts.ts";
 

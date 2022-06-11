@@ -1,4 +1,4 @@
-import { TextEncoderStream } from "../streams/index.ts";
+import { TextEncoderStream } from "../index.ts";
 
 import { assertEquals } from "https://deno.land/std@0.143.0/testing/asserts.ts";
 
