@@ -2,7 +2,7 @@
 
 A streaming utility library built for the modern [Web Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) era and works with Deno and Cloudlfare Workers runtimes!
 
-Note: This library is in its very early stages so all API's are subject to change until the first major release. :) 
+Note: This library is in its very early stages so all API's are subject to change until the first major release. :)
 
 ## Usage
 
@@ -18,18 +18,18 @@ const multiplyBy10 = new MapStream((a: number) => a * 10);
 
 // Create a stream of data
 const source = new ReadableStream({
-start(controller: ReadableStreamDefaultController) {
+  start(controller: ReadableStreamDefaultController) {
     data.forEach((e) => {
-    controller.enqueue(e);
+      controller.enqueue(e);
     });
     controller.close();
-},
+  },
 });
 
 // Apply your mapping operation to the stream of data
 source.pipeThrough(multiplyBy10).pipeTo(writable);
 for await (const result of readable) {
-    console.log(result)
+  console.log(result);
 }
 ```
 
@@ -37,7 +37,7 @@ For more examples, checkout the `tests/` directory.
 
 ## Developing
 
-To contribute, ensure you have the latest version of [Deno](https://deno.land/) installed. 
+To contribute, ensure you have the latest version of [Deno](https://deno.land/) installed.
 
 ### Running Tests
 
