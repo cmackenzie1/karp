@@ -12,7 +12,9 @@ change until the first major release. :)
 ## Usage
 
 ```ts
-import { MapStream } from "./streams/index.ts";
+import { MapStream } from "https://github.com/cmackenzie1/karp/raw/main/index.ts";
+// or `npm install karp`
+// import { MapStream } from "karp";
 
 // Create an destination for the final result to be piped to.
 const { readable, writable } = new TransformStream();
