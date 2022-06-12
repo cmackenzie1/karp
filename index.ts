@@ -5,7 +5,7 @@ import { ReadJSONTransformer } from "./lib/transformers/jsonRead.ts";
 // @ts-ignore: disable TS2691
 import { WriteJSONTransformer } from "./lib/transformers/jsonWrite.ts";
 // @ts-ignore: disable TS2691
-import { MapTransformer } from "./lib/transformers/map.ts";
+import { FlatMapTransformer, MapTransformer } from "./lib/transformers/map.ts";
 // @ts-ignore: disable TS2691
 import { ReadlineTransformer } from "./lib/transformers/readline.ts";
 // @ts-ignore: disable TS2691
@@ -15,6 +15,7 @@ import { TextEncodeTransformer } from "./lib/transformers/textEncode.ts";
 
 export {
   FilterTransformer,
+  FlatMapTransformer,
   MapTransformer,
   ReadJSONTransformer,
   ReadlineTransformer,
@@ -68,6 +69,12 @@ export class FilterStream<I> extends TransformStream {
 export class MapStream<I, O> extends TransformStream {
   constructor(fn: (a: I) => O) {
     super(new MapTransformer(fn));
+  }
+}
+
+export class FlatMapStream<I, O> extends TransformStream {
+  constructor(fn: (a: I) => O) {
+    super(new FlatMapTransformer(fn));
   }
 }
 
